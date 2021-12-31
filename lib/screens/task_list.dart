@@ -1,3 +1,4 @@
+import 'package:figma_project/utils/list.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -38,19 +39,25 @@ class TaskList extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(100),
-                    child: Container(
-                      height: 150,
-                      width: 150,
-                      child: Image(
-                        fit: BoxFit.cover,
-                        image: AssetImage("assets/najam.jpg"),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 20.0),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(100),
+                      child: Container(
+                        height: 150,
+                        width: 150,
+                        color: Colors.white54,
+                        child: Image(
+                          fit: BoxFit.cover,
+                          image: AssetImage(
+                            "assets/najam-preview.png",
+                          ),
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 15,
+                    height: 10,
                   ),
                   Text(
                     "Najam Ul Hassan",
@@ -62,11 +69,61 @@ class TaskList extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.1,
+                    height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   Expanded(
                     child: Container(
-                      color: Colors.white,
+                      color: Color(0xFFFF6F6F6),
+                      child: ListView(
+                        children: [
+                          Padding(
+                            padding:
+                                const EdgeInsets.only(top: 20, right: 15.0),
+                            child: Text(
+                              "Good Afternoon",
+                              textAlign: TextAlign.right,
+                              style: GoogleFonts.mcLaren(
+                                textStyle: TextStyle(
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Image.asset(
+                            "assets/clock.png",
+                            height: 150,
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.only(top: 20, left: 20),
+                            child: Text(
+                              "Tasks List",
+                              style: GoogleFonts.mcLaren(
+                                textStyle: TextStyle(
+                                  fontSize: 24,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(15.0),
+                            child: Container(
+                              height: 215,
+                              child: Card(
+                                elevation: 30,
+                                shadowColor: Colors.grey,
+                                shape: BeveledRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20.0),
+                                ),
+                                child: Column(
+                                  children: list,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],

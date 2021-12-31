@@ -9,7 +9,7 @@ class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: Color(0xFFFF6F6F6),
       body: SafeArea(
         child: Stack(
           children: [
@@ -52,8 +52,8 @@ class SignUpScreen extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.all(15.0),
-                    child: Image(
-                      image: AssetImage("assets/notification.png"),
+                    child: Image.asset(
+                      "assets/notification.png",
                       height: 200,
                     ),
                   ),

@@ -1,4 +1,5 @@
 import 'package:figma_project/screens/signup_screen.dart';
+import 'package:figma_project/utils/list.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -14,7 +15,7 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: Color(0xFFFF6F6F6),
       body: SafeArea(
         child: Stack(
           children: [

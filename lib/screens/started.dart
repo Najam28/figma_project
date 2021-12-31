@@ -9,7 +9,7 @@ class Started extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFFFFFFF),
+      backgroundColor: Color(0xFFFF6F6F6),
       body: SafeArea(
           child: Stack(
         children: [
@@ -40,10 +40,8 @@ class Started extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.15,
               ),
-              Image(
-                image: AssetImage(
-                  "assets/flutter.png",
-                ),
+              Image.asset(
+                "assets/flutter.png",
                 width: 310,
               ),
               Text(
