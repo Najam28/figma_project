@@ -18,7 +18,7 @@ final List<Widget> list = [
         ),
       ),
       Padding(
-        padding: const EdgeInsets.only(left: 220, top: 12),
+        padding: const EdgeInsets.only(left: 170, top: 12),
         child: Icon(
           Icons.add_circle_outline,
           color: Colors.lightBlue,
